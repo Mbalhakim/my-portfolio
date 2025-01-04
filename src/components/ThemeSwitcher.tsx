@@ -23,10 +23,16 @@ const ThemeSwitcher = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-md bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+      className="p-1 rounded-md bg-gray-800 dark:bg-gray-200 text-gray-100 dark:text-gray-900 flex items-center"
       aria-label="Toggle Dark Mode"
     >
-      {isDarkMode ? '🌙 Dark' : '☀️ Light'}
+      {/* Icon */}
+      <span className="block md:hidden">{isDarkMode ? '☀️' : '🌙'}</span>
+
+      {/* Text */}
+      <span className="hidden md:block">
+        {isDarkMode ? '☀️ Light' : '🌙 Dark'}
+      </span>
     </button>
   );
 };

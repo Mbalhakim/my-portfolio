@@ -2,7 +2,7 @@
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-[var(--background)] text-[var(--foreground)]">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
         <div className="grid md:grid-cols-2 gap-12">
@@ -62,7 +62,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700"
+              className="w-full bg-blue-600 dark:bg-blue-700 text-white px-6 py-3 rounded-md hover:bg-blue-700 dark:hover:bg-blue-800"
             >
               Send Message
             </button>

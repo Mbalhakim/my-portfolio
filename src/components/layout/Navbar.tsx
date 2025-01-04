@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm dark:bg-gray-900">
+    <nav className="bg-white shadow-sm dark:bg-gray-900 sticky top-0">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -35,16 +35,18 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
-          <ThemeSwitcher /> 
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 dark:text-gray-300"
-            >
-              <Menu size={24} />
-            </button>
-           
-          </div>
+            <div className="md:hidden flex items-center space-x-4">
+                <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-700 dark:text-gray-300"
+                >
+                <Menu size={24} />
+
+                </button>
+            <ThemeSwitcher /> 
+
+            
+            </div>
         </div>
       </div>
 
